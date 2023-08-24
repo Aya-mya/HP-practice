@@ -1,0 +1,135 @@
+.l-page {
+    position: relative;
+}
+
+.l-page__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    width: 100%;
+}
+
+
+
+.header_imgs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 75%;
+        height: 100%;
+    
+}
+
+.header_imgs picture img, .header_imgs picture source {
+    width: 100%;
+    height: auto;
+}
+
+
+.header_imgs .slick-next {
+    right: 20px;
+    z-index: 99;
+}
+
+.header_imgs .slick-prev {
+    left: 15px;
+    z-index: 100;
+}
+
+.js-text__anime{
+    display: block;
+}
+
+
+
+@media all and (min-width:1081px) {
+
+    #main-content {
+        width: 65%;
+        float: left;
+    }
+    
+   
+    
+    .clearfix:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    #sns {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+  }
+  
+  @media all and (max-width:1080px) {
+
+    #l-header {
+        display: flex;
+        position: relative;
+        height: 78px;
+        padding: 0 30px;
+    }
+
+    #l-gnav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;}
+
+        #l-gnav__layer {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(2,3,10,0.68) 0%, rgba(2,3,10,0.68) 75%, rgba(2,3,10,0) 100%);}
+
+            #l-gnav__outer {
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 290px;
+                height: 100%;
+                background: #02030a;}
+        
+                #l-gnav__inner {
+                    display: flex;
+                    align-items: center;
+                    box-sizing: border-box;
+                    position: relative;
+                    min-height: 100%;
+                    padding: 40px;
+                }
+
+                #l-gnav__list {
+                    display: block;
+                    width: 100%;
+                }
+
+
+    #main-content {
+        width: 98%;
+    }
+
+    #sidebar {
+        width: 100%;
+    }
+
+    #sns {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+  }
