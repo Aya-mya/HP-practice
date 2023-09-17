@@ -1,78 +1,65 @@
-#header {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+.l-page__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    width: 100%;
 }
 
-#top-menu {
+.l-header {
+    display: flex;
+    position: relative;
+    height: 78px;
+    padding: 0 30px;
+}
+
+.l-gnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.l-gnav__layer {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(2, 3, 10, 0.68) 0%, rgba(2, 3, 10, 0.68) 75%, rgba(2, 3, 10, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ad02030a", endColorstr="#0002030a",GradientType=1 );
+    cursor: pointer;
+    transform: translateX(-200%);
+    transition: transform .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.l-gnav__layer {
+    display: none;
+}
+
+.l-gnav__outer {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 290px;
+    height: 100%;
+    background: #02030a;
+    transform: translateX(100%);
+    transition: transform .6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.l-gnav__inner {
     display: flex;
     align-items: center;
-    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100%;
+    padding: 40px;
 }
 
-#top-menu li{
-    list-style: none;
-    flex:1;
-    height: 60px;
-    line-height:  60px;
-    overflow-wrap:normal;
-    margin-right: 2px;
-    text-align: center;
-    padding: auto;
-}
-
-#top-menu li a{
-    color:white;
-    text-decoration: none;
-    font-size: 2.5vw;
-}
-
-
-
-@media all and (min-width:1081px) { /*for desktop*/
-   
-    span#title {
-        display: inline-block;
-        vertical-align: middle;
-        font-size:20px;
-        margin-left: 10px;
-    }
-    
-    span#lang {
-        display: inline-block;
-        position: absolute;
-        right: 2%;
-        top: 4rem;
-        
-    }
-
-}
-
-@media all and (max-width:1080px) { /*for mobile phones*/
-    
-
-    span#title {
-        display: inline-block;
-        margin-left: 10px;
-        margin-right: auto;
-        /* text-align: center; */
-        line-height: 1em;
-        font-size: 3vw;
-
-    }
-
-    span#lang {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: right;
-    }
-
-
-  
-}
